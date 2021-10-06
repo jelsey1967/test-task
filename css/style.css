@@ -57,7 +57,7 @@ body.lock {
 
 .header {
   height: 252px;
-  background-image: url("../img/header.png);
+  background-image: url("../img/header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
