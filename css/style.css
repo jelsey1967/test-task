@@ -757,7 +757,7 @@ body.lock {
   position: absolute;
   top: 4px;
   left: 4px;
-  background-image: url(/img/check-mark.svg);
+  background-image: url("../img/check-mark.svg");
 }
 
 .check__input:focus + .check__fake {

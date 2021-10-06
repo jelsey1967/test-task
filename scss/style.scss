@@ -47,7 +47,7 @@ body {
 }
 .header {
 	height: 252px;
-	background-image: url(/img/header.png);
+	background-image: url("../img/header.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -596,7 +596,7 @@ body {
 			position: absolute;
 			top: 4px;
 			left: 4px;
-			background-image: url(/img/check-mark.svg);
+			background-image: url("../img/check-mark.svg");
 		}
 	}
 
