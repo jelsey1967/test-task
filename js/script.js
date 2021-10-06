@@ -1,8 +1,6 @@
-let headerBurger = document.querySelector('.header__burger'),
-	headerNav = document.querySelector('.header__nav');
-
-headerBurger.addEventListener('click', ()=>{
-	headerBurger.classList.toggle('active');
-	headerNav.classList.toggle('active');
-	document.body.classList.toggle('lock');
+$(document).ready(function () {
+	$('.header__burger').click(function (event) {
+		$('.header__burger,.header__nav').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
 });

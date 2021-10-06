@@ -84,7 +84,7 @@ body {
 		height: 78px;
 		margin-right: calc(10px + 110 * ((100vw - 320px) / (1440 - 320)));
 
-		@media (max-width: 425px){
+		@media (max-width: 425px) {
 			width: 50px;
 			height: 50px;
 		}
@@ -106,7 +106,7 @@ body {
 			overflow: auto;
 			background-color: #6ebbd3;
 			padding: 70px 10px 20px 10px;
-			transition: all 1.5s ease 0s;
+			transition: all 0.8s;
 
 			&.active {
 				top: 0;
@@ -135,6 +135,7 @@ body {
 		}
 
 		@media (max-width: 850px) {
+			display: block;
 			font-size: 24px;
 
 			&:nth-child(1) {
@@ -149,7 +150,7 @@ body {
 		}
 	}
 
-	&__nav.active + &__contact{
+	&__nav.active + &__contact {
 		display: none;
 	}
 
@@ -255,7 +256,7 @@ body {
 		margin-bottom: 83px;
 		transition: background 0.2s;
 
-		@media (max-width: 450px){
+		@media (max-width: 450px) {
 			width: 100%;
 		}
 
@@ -274,7 +275,7 @@ body {
 		font-size: 18px;
 		margin-right: calc(10px + 38 * ((100vw - 320px) / (1440 - 320)));
 
-		@media (max-width: 450px){
+		@media (max-width: 450px) {
 			width: 100%;
 			margin: 0 0 20px 0;
 		}
@@ -294,7 +295,7 @@ body {
 	&__arrow {
 		width: 15px;
 		height: 15px;
-		margin-left: 15px; 
+		margin-left: 15px;
 		transition: transform 0.3s;
 	}
 
@@ -304,13 +305,13 @@ body {
 }
 .cards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 21px;
 	grid-row-gap: 27px;
 	margin: 38px 0 68px 0;
 
 	@media (max-width: 800px) {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 1fr;
 	}
 
 	@media (max-width: 550px) {
@@ -321,7 +322,7 @@ body {
 	&__item {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
+		width: 95%;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
 		overflow: hidden;
@@ -334,6 +335,92 @@ body {
 		@media (max-width: 390px) {
 			width: 100%;
 		}
+
+		/* IE11 */
+		&:nth-child(1) {
+			-ms-grid-column: 1;
+			-ms-grid-row: 1;
+			margin-bottom: 27px;
+		}
+		&:nth-child(2) {
+			-ms-grid-column: 2;
+			-ms-grid-row: 1;
+			margin-bottom: 27px;
+		}
+		&:nth-child(3) {
+			-ms-grid-column: 3;
+			-ms-grid-row: 1;
+			margin-bottom: 27px;
+		}
+		&:nth-child(4) {
+			-ms-grid-column: 1;
+			-ms-grid-row: 2;
+		}
+		&:nth-child(5) {
+			-ms-grid-column: 2;
+			-ms-grid-row: 2;
+		}
+		&:nth-child(6) {
+			-ms-grid-column: 3;
+			-ms-grid-row: 2;
+		}
+
+		@media (max-width: 800px) {
+			&:nth-child(1) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 1;
+			}
+			&:nth-child(2) {
+				-ms-grid-column: 2;
+				-ms-grid-row: 1;
+			}
+			&:nth-child(3) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 2;
+			}
+			&:nth-child(4) {
+				-ms-grid-column: 2;
+				-ms-grid-row: 2;
+				margin-bottom: 27px;
+			}
+			&:nth-child(5) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 3;
+			}
+			&:nth-child(6) {
+				-ms-grid-column: 2;
+				-ms-grid-row: 3;
+			}
+		}
+
+		@media (max-width: 550px) {
+			&:nth-child(1) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 1;
+			}
+			&:nth-child(2) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 2;
+			}
+			&:nth-child(3) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 3;
+			}
+			&:nth-child(4) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 4;
+			}
+			&:nth-child(5) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 5;
+				margin-bottom: 27px;
+			}
+			&:nth-child(6) {
+				-ms-grid-column: 1;
+				-ms-grid-row: 6;
+			}
+		}
+		/* / IE11 */
 	}
 
 	&__wrap {
@@ -360,7 +447,7 @@ body {
 		opacity: 0;
 		visibility: hidden;
 
-		@media (max-width: 1100px){
+		@media (max-width: 1100px) {
 			padding: 7px 11px;
 			top: 24px;
 			left: 28px;
@@ -381,7 +468,7 @@ body {
 		opacity: 0.5;
 		transition: opacity 0.2s;
 
-		@media (max-width: 1100px){
+		@media (max-width: 1100px) {
 			width: 36px;
 			height: 36px;
 			top: 24px;
@@ -493,7 +580,7 @@ body {
 		font-size: 48px;
 		margin-bottom: 26px;
 
-		@media(max-width:690px){
+		@media (max-width: 690px) {
 			font-size: 38px;
 		}
 	}
@@ -507,7 +594,7 @@ body {
 			width: auto;
 		}
 
-		@media(max-width:690px){
+		@media (max-width: 690px) {
 			font-size: 18px;
 		}
 	}
@@ -515,6 +602,7 @@ body {
 	&__form {
 		display: flex;
 		flex-wrap: wrap;
+		max-width: 566px;
 	}
 
 	&__email {
@@ -534,7 +622,7 @@ body {
 			box-shadow: 0 0 10px rgb(100, 100, 100);
 		}
 
-		@media(max-width:690px){
+		@media (max-width: 690px) {
 			width: 100%;
 			margin: 0 0 10px 0;
 		}
@@ -558,7 +646,7 @@ body {
 			width: 250px;
 		}
 
-		@media(max-width:690px){
+		@media (max-width: 690px) {
 			width: 100%;
 		}
 	}
