@@ -142,9 +142,9 @@
 						<p class="subscribe__title">Успей купить!</p>
 						<p class="subscribe__subtitle">Подпишись и успей словить все акции</p>
 					</div>
-					<form action="#" class="subscribe__form">
+					<form action="#" id="subscribe-form" class="subscribe__form">
 						<input type="email" name="email" id="email" class="subscribe__email" placeholder="Email">
-						<button class="subscribe__button button">Подписаться</button>
+						<button class="subscribe__button button" id="subscribe-button">Подписаться</button>
 						<label class="subscribe__checkbox check">
 							<input type="checkbox" name="subscribe-checkbox" id="subscribe-checkbox" class="check__input">
 							<div class="check__fake"></div>
@@ -153,10 +153,14 @@
 					</form>
 				</div>
 			</div>
-			<div class="scroll-up"><img src="img/scroll-arrow.svg" alt="Наверх"></div>
 		</div>
 	</main>
-	
+
+	<div class="scroll-up"><img src="img/scroll-arrow.svg" alt="Наверх"></div>
+	<div class="favourites-popup">
+		<div class="favourites-popup__close"></div>
+		<p class="favourites-popup__text">Товар добавлен в избранное.</p>
+	</div>
 
 	<script src="js/script.js"></script>
 </body>

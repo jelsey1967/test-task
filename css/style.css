@@ -19,7 +19,7 @@ body.lock {
   overflow: hidden;
 }
 
-/*Повторяющиеся элементы*/
+/* Повторяющиеся элементы */
 .container {
   max-width: 1180px;
   margin: 0 auto;
@@ -55,6 +55,7 @@ body.lock {
   background-color: #528ea0;
 }
 
+/* Стилизация разделов*/
 .header {
   height: 252px;
   background-image: url("../img/header.png");
@@ -571,6 +572,7 @@ body.lock {
   width: 46px;
   height: 46px;
   opacity: 0.5;
+  cursor: pointer;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -874,9 +876,109 @@ body.lock {
   position: fixed;
   right: 0px;
   bottom: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.scroll-up.active {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
 }
 
 .scroll-up img {
   width: 18px;
   height: 18px;
+}
+
+.favourites-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  background-color: #1f2021e5;
+  border-radius: 5px;
+  padding: 5px 40px 5px 15px;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.favourites-popup.active {
+  opacity: 1;
+  -webkit-animation: opacity  2s 1 normal forwards;
+          animation: opacity  2s 1 normal forwards;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.favourites-popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.favourites-popup__close::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.favourites-popup__close::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.favourites-popup__text {
+  font-size: 18px;
+  color: #fff;
 }
