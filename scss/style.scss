@@ -521,12 +521,12 @@ body {
 		padding-left: 22px;
 
 		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-			@media (max-width: 550px){
+			@media (max-width: 550px) {
 				font-size: 12px;
 			}
-			@media (max-width: 375px){
+			@media (max-width: 375px) {
 				font-size: 10px;
-			}	
+			}
 		}
 
 		&::before {
@@ -545,10 +545,10 @@ body {
 		margin: 0 45px 0 20px;
 
 		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-			@media (max-width: 550px){
+			@media (max-width: 550px) {
 				font-size: 12px;
 			}
-			@media (max-width: 375px){
+			@media (max-width: 375px) {
 				font-size: 10px;
 			}
 		}
@@ -568,10 +568,10 @@ body {
 		font-size: calc(9px + 2 * ((100vw - 320px) / (1440 - 320)));
 
 		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-			@media (max-width: 550px){
+			@media (max-width: 550px) {
 				font-size: 12px;
 			}
-			@media (max-width: 375px){
+			@media (max-width: 375px) {
 				font-size: 10px;
 			}
 		}
@@ -657,14 +657,23 @@ body {
 		margin-right: 16px;
 		background-color: #fff;
 		border-radius: 10px;
+		transition: all 0.2s;
+
+		&::-ms-clear {
+			display: none;
+		}
 
 		&::placeholder {
 			font-size: 14px;
 			color: #000;
 		}
-
 		&:focus {
 			box-shadow: 0 0 10px rgb(100, 100, 100);
+		}
+
+		&.error {
+			box-shadow: 0 0 10px red;
+			background-color: rgb(255, 235, 235);
 		}
 
 		@media (max-width: 690px) {
@@ -678,6 +687,7 @@ body {
 		height: 65px;
 		border-radius: 10px;
 		font-size: 14px;
+		cursor: pointer;
 
 		&:focus {
 			box-shadow: 0 0 10px #00526b;

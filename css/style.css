@@ -806,6 +806,12 @@ body.lock {
   margin-right: 16px;
   background-color: #fff;
   border-radius: 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.subscribe__email::-ms-clear {
+  display: none;
 }
 
 .subscribe__email::-webkit-input-placeholder {
@@ -833,6 +839,12 @@ body.lock {
           box-shadow: 0 0 10px #646464;
 }
 
+.subscribe__email.error {
+  -webkit-box-shadow: 0 0 10px red;
+          box-shadow: 0 0 10px red;
+  background-color: #ffebeb;
+}
+
 @media (max-width: 690px) {
   .subscribe__email {
     width: 100%;
@@ -845,6 +857,7 @@ body.lock {
   height: 65px;
   border-radius: 10px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .subscribe__button:focus {
