@@ -413,13 +413,12 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 95%;
+  width: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
   position: relative;
-  /* IE11 */
-  /* / IE11 */
+  /* / IE */
 }
 
 @media (max-width: 550px) {
@@ -428,46 +427,55 @@ body.lock {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 500px) {
   .cards__item {
     width: 100%;
   }
 }
 
-.cards__item:nth-child(1) {
-  -ms-grid-column: 1;
-  -ms-grid-row: 1;
-  margin-bottom: 27px;
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .cards__item {
+    width: 95%;
+    /* IE */
+  }
+  .cards__item:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    margin-bottom: 27px;
+  }
+  .cards__item:nth-child(2) {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    margin-bottom: 27px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .cards__item:nth-child(3) {
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    margin-bottom: 27px;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .cards__item:nth-child(4) {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+  }
+  .cards__item:nth-child(5) {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .cards__item:nth-child(6) {
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 
-.cards__item:nth-child(2) {
-  -ms-grid-column: 2;
-  -ms-grid-row: 1;
-  margin-bottom: 27px;
-}
-
-.cards__item:nth-child(3) {
-  -ms-grid-column: 3;
-  -ms-grid-row: 1;
-  margin-bottom: 27px;
-}
-
-.cards__item:nth-child(4) {
-  -ms-grid-column: 1;
-  -ms-grid-row: 2;
-}
-
-.cards__item:nth-child(5) {
-  -ms-grid-column: 2;
-  -ms-grid-row: 2;
-}
-
-.cards__item:nth-child(6) {
-  -ms-grid-column: 3;
-  -ms-grid-row: 2;
-}
-
-@media (max-width: 800px) {
+@media screen and (-ms-high-contrast: active) and (max-width: 800px), (-ms-high-contrast: none) and (max-width: 800px) {
   .cards__item:nth-child(1) {
     -ms-grid-column: 1;
     -ms-grid-row: 1;
@@ -475,27 +483,40 @@ body.lock {
   .cards__item:nth-child(2) {
     -ms-grid-column: 2;
     -ms-grid-row: 1;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
   .cards__item:nth-child(3) {
     -ms-grid-column: 1;
     -ms-grid-row: 2;
+    -ms-grid-column-align: start;
+        justify-self: start;
   }
   .cards__item:nth-child(4) {
     -ms-grid-column: 2;
     -ms-grid-row: 2;
     margin-bottom: 27px;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
   .cards__item:nth-child(5) {
     -ms-grid-column: 1;
     -ms-grid-row: 3;
+    -ms-grid-column-align: start;
+        justify-self: start;
   }
   .cards__item:nth-child(6) {
     -ms-grid-column: 2;
     -ms-grid-row: 3;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 
-@media (max-width: 550px) {
+@media screen and (-ms-high-contrast: active) and (max-width: 550px), (-ms-high-contrast: none) and (max-width: 550px) {
+  .cards__item {
+    width: 100%;
+  }
   .cards__item:nth-child(1) {
     -ms-grid-column: 1;
     -ms-grid-row: 1;
@@ -617,6 +638,18 @@ body.lock {
   padding-left: 22px;
 }
 
+@media screen and (-ms-high-contrast: active) and (max-width: 550px), (-ms-high-contrast: none) and (max-width: 550px) {
+  .cards__color {
+    font-size: 12px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 375px), (-ms-high-contrast: none) and (max-width: 375px) {
+  .cards__color {
+    font-size: 10px;
+  }
+}
+
 .cards__color::before {
   content: "";
   width: 4px;
@@ -630,6 +663,18 @@ body.lock {
 .cards__age {
   font-size: calc(9px + 2 * ((100vw - 320px) / (1440 - 320)));
   margin: 0 45px 0 20px;
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 550px), (-ms-high-contrast: none) and (max-width: 550px) {
+  .cards__age {
+    font-size: 12px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 375px), (-ms-high-contrast: none) and (max-width: 375px) {
+  .cards__age {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -646,6 +691,18 @@ body.lock {
 
 .cards__paws {
   font-size: calc(9px + 2 * ((100vw - 320px) / (1440 - 320)));
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 550px), (-ms-high-contrast: none) and (max-width: 550px) {
+  .cards__paws {
+    font-size: 12px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 375px), (-ms-high-contrast: none) and (max-width: 375px) {
+  .cards__paws {
+    font-size: 10px;
+  }
 }
 
 .cards__paws span {
@@ -822,6 +879,7 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
+  cursor: pointer;
 }
 
 @media (max-width: 1100px) {
@@ -874,18 +932,14 @@ body.lock {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  right: 0px;
-  bottom: 0px;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.scroll-up.active {
-  opacity: 1;
-  visibility: visible;
+  right: 0;
+  bottom: -60px;
   cursor: pointer;
+  -webkit-box-shadow: 0 0 1px #0c3f4e;
+          box-shadow: 0 0 1px #0c3f4e;
+  /* для того, чтобы кнопка "наверх" не сливась с кнопками карточек */
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
 }
 
 .scroll-up img {
@@ -907,18 +961,25 @@ body.lock {
   position: fixed;
   left: 10px;
   bottom: 10px;
-  background-color: #1f2021e5;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   padding: 5px 40px 5px 15px;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   opacity: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .favourites-popup {
+    -webkit-transition: opacity 0s;
+    transition: opacity 0s;
+  }
 }
 
 .favourites-popup.active {
   opacity: 1;
-  -webkit-animation: opacity  2s 1 normal forwards;
-          animation: opacity  2s 1 normal forwards;
+  -webkit-animation: opacity 2s 1 normal forwards;
+          animation: opacity 2s 1 normal forwards;
 }
 
 @-webkit-keyframes opacity {
@@ -926,7 +987,7 @@ body.lock {
     opacity: 1;
   }
   95% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   100% {
     opacity: 0;
@@ -938,7 +999,7 @@ body.lock {
     opacity: 1;
   }
   95% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   100% {
     opacity: 0;
@@ -955,7 +1016,7 @@ body.lock {
 }
 
 .favourites-popup__close::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   right: 0;
@@ -967,7 +1028,7 @@ body.lock {
 }
 
 .favourites-popup__close::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   right: 0;

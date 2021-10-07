@@ -20,14 +20,14 @@ $(document).ready(function() {
 
 	$(window).scroll(function(){
 		if ($(window).scrollTop() >= 50) {
-			$(".scroll-up").addClass("active");
+			$(".scroll-up").css({ 'bottom': '0', 'right': $(".main__body").offset().left});
 		} else {
-			$(".scroll-up").removeClass("active");
+			$(".scroll-up").css({ 'bottom': '-60px', 'right': $(".main__body").offset().left});
 		}
 	});
 
 	if (window.pageYOffset > 50) {
-		$(".scroll-up").addClass("active");
+		$(".scroll-up").css({ 'bottom': '0', 'right': $(".main__body").offset().left});
 	};
 
 	$(".scroll-up").click(function(){
